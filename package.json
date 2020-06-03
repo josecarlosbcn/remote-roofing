@@ -1,0 +1,39 @@
+{
+  "name": "remroofing",
+  "version": "1.0.0",
+  "description": "Code to build an API for projects, users and tasks",
+  "main": "index.js",
+  "scripts": {
+    "clean-build": "rm -rf ./build",
+    "dev": "nodemon --exec babel-node src/server/server.js",
+    "build": "npm run clean-build && NODE_ENV=production babel src -d ./build",
+    "test": "jest babel-polyfill ./tests"
+  },
+  "author": "José Carlos Liria Céspedes",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.0",
+    "path": "^0.12.7",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.11",
+    "sequelize-cli": "^5.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/node": "^7.10.1",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "babel-loader": "^8.1.0",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "webpack": "^4.43.0"
+  }
+}

@@ -1,0 +1,19 @@
+//To let the use of module.exports with imports in the same file with webpack, we need to add
+//the property {"modules" : "cjs"} to @babel/preset-env because by default is auto and with this
+//value we've got a warning which say to us that "export 'Header' was not found in 
+//'./components/Header" and this warning later give us an error in the browser because module.exports is
+//read-only
+
+{
+    "presets": [
+        ["@babel/preset-env" , {"modules": "cjs"}]
+    ],
+    "ignore": [
+        "./node_modules"
+    ],
+    "env": {
+        "test": {
+          "plugins": ["@babel/plugin-transform-runtime"]
+        }
+    }
+}
