@@ -8,7 +8,7 @@ In this repository you can find all the code and config files that you need to r
 
 We've got two config files:
 
-* /config/config.json: Here you can find the config of your database. By default, the application runs in development mode, so change that values, please.
+* /src/server/config/config.json: Here you can find the config of your database. By default, the application runs in development mode, so change that values, please.
 * .env: In this file you ca find the configuration of server. You can find the name and port of server and the domain of the API.
 
 ## Package.json
